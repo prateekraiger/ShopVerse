@@ -8,12 +8,14 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between py-4 px-6 font-medium border-b border-gray-200 shadow-sm">
+      <Link to="/" className="text-gray-700 cursor-pointer">
       <img
         src={assets.logo}
         alt="logo"
         className="w-36 h-auto object-contain"
       />
 
+        </Link>
       <ul className="absolute left-1/2 transform -translate-x-1/2 hidden sm:flex gap-10 text-sm text-gray-700">
         {[
           { to: "/", label: "HOME" },
