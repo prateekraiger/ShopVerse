@@ -37,7 +37,7 @@ const BestSeller = () => {
           ))
         ) : (
           <p className="col-span-full text-center text-gray-500">
-            No best sellers found
+            Unable to load products
           </p>
         )}
       </div>
