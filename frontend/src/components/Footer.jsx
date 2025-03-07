@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 text-sm">
         {/* Logo & Description */}
         <div>
-          <img srcū={assets.logo} className="mb-5 w-32" alt="ShopVerse Logo" />
+          <img src={assets.logo} className="mb-5 w-32" alt="ShopVerse Logo" />
           <p className="text-gray-700">
             Your go-to online store for the best products at unbeatable prices.
           </p>
