@@ -56,7 +56,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="mt-10 border-t border-gray-700 text-center pt-5 text-sm">
-        <p>Copyright &copy; 2024 ShopVerse. All rights reserved.</p>
+        <p>Copyright &copy; 2025 ShopVerse. All rights reserved.</p>
       </div>
     </footer>
   );
