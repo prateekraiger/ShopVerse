@@ -3,8 +3,10 @@ import { ShopContext } from "../context/ShopContext";
 import Title from "../components/title";
 import { assets } from "../assets/assets";
 import CartTotal from "../components/cartTotal";
+
 const Cart = () => {
-  const { products, currency, cartItems, addToCart } = useContext(ShopContext);
+  const { products, currency, cartItems, addToCart, navigate } =
+    useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
@@ -24,19 +26,21 @@ const Cart = () => {
   }, [cartItems]);
 
   const handleQuantityChange = (itemId, size, quantity) => {
-    if (quantity < 1) return; // Prevent negative quantities
+    if (quantity < 1) return;
     addToCart(itemId, size, quantity);
   };
 
   const handleRemoveItem = (itemId, size) => {
     const updatedCartItems = { ...cartItems };
-    if (updatedCartItems[itemId][size]) {
+
+    if (updatedCartItems[itemId]?.[size]) {
       delete updatedCartItems[itemId][size];
+
       if (Object.keys(updatedCartItems[itemId]).length === 0) {
         delete updatedCartItems[itemId];
       }
     }
-    // Update the cart context
+
     setCartData((prev) =>
       prev.filter((item) => !(item._id === itemId && item.size === size))
     );
@@ -56,6 +60,9 @@ const Cart = () => {
             const productData = products.find(
               (product) => product._id === item._id
             );
+
+            if (!productData) return null; // Prevents errors if product not found
+
             const { name, price, image } = productData;
 
             return (
@@ -65,7 +72,7 @@ const Cart = () => {
               >
                 <div className="flex items-start gap-6">
                   <img
-                    src={image[0]}
+                    src={image?.[0] || assets.placeholder_image}
                     alt={name}
                     className="w-16 sm:w-20 h-20 object-cover rounded-lg"
                   />
@@ -104,8 +111,16 @@ const Cart = () => {
               </div>
             );
           })}
-          {/* Render CartTotal component here */}
+          {/* Render CartTotal component */}
           <CartTotal />
+          <div className="w-full text-end">
+            <button
+              onClick={() => navigate("/placeorder")}
+              className="bg-black text-white text-sm my-8 px-8 py-3"
+            >
+              PROCEED TO CHECKOUT
+            </button>
+          </div>
         </div>
       )}
     </div>
