@@ -19,20 +19,20 @@ const Footer = () => {
             Your go-to online store for the best products at unbeatable prices.
           </p>
         </div>
-
-        {/* Company Links */}
+        {/* Company Links */}\
         <div>
           <p className="text-lg font-semibold mb-4 text-white">Company</p>
           <ul className="space-y-2">
             <li className="hover:text-green-400 cursor-pointer">Home</li>
+
             <li className="hover:text-green-400 cursor-pointer">About</li>
+
             <li className="hover:text-green-400 cursor-pointer">Delivery</li>
             <li className="hover:text-green-400 cursor-pointer">
               Privacy Policy
-            </li>
+            </li>d
           </ul>
         </div>
-
         {/* Contact Info */}
         <div>
           <p className="text-lg font-semibold mb-4 text-white">Get in Touch</p>

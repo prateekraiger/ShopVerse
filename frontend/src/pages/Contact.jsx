@@ -1,7 +1,14 @@
 import React from "react";
+import Title from "../components/Title";
 
 const Contact = () => {
-  return <div className="text-lg text-center text-red-500">Contact</div>;
+  return (
+    <div>
+      <div className="text-center text-2xl pt-10 border-t">
+        <Title text1={"CONTACT "} text2={"Us"} />
+      </div>
+    </div>
+  );
 };
 
 export default Contact;

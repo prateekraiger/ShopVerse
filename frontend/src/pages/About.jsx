@@ -5,72 +5,70 @@ import Newsletter from "../components/newslater";
 
 const About = () => {
   return (
-    <div>
-      <div className="text-2xl text-center pt-8 border-t">
-        <Title text1={"ABOUT "} text2={"US"} />
+    <div className="container mx-auto px-6 py-12">
+      {/* About Us Section */}
+      <div className="text-center border-t pt-8">
+        <Title text1="ABOUT " text2="US" />
       </div>
-      <div className="my-10 flex flex-col md:flex-row gap-16">
+      <div className="my-10 flex flex-col md:flex-row items-center gap-12">
         <img
           src={assets.about_img}
-          className="w-full md:max-w-[450px]"
-          alt="about us"
+          className="w-full md:max-w-[450px] rounded-lg shadow-lg"
+          alt="About us"
         />
-        <div className="flex flex-col justify center gap-6 md:w-2/4 text-gray-600">
+        <div className="flex flex-col gap-6 md:w-2/4 text-gray-700">
           <p>
-            This is a shopping website for all the shoppers to buy the products.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur,
-            ad sint? Voluptatibus praesentium esse debitis corporis soluta
-            incidunt. Cumque obcaecati minus non facilis. Blanditiis, dolor
-            dolores eveniet voluptatibus error optio!
+            Welcome to our shopping platform, designed to provide the best
+            shopping experience with quality products at your fingertips. Our
+            mission is to make online shopping seamless and enjoyable for every
+            customer.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sequi.
-            Aliquam earum explicabo porro, ratione blanditiis laudantium animi,
-            similique asperiores sit temporibus quis unde sequi saepe ex, eaque
-            aliquid at.
+            We prioritize customer satisfaction by offering a vast collection of
+            products, easy navigation, and secure payment options. Whether you
+            are looking for the latest trends or everyday essentials, we have
+            got you covered.
           </p>
-          <b className="text-gray-800">Our Mission</b>
+          <b className="text-gray-800 text-lg">Our Mission</b>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-            expedita, architecto necessitatibus, nostrum modi voluptatum nihil
-            illo consequuntur libero natus hic incidunt sequi at perspiciatis.
-            At exercitationem laboriosam suscipit eum.
+            Our mission is to deliver top-quality products while ensuring a
+            hassle-free shopping experience. We are committed to excellence,
+            customer satisfaction, and innovation in the e-commerce space.
           </p>
         </div>
       </div>
-      <div className="text-xl py-4">
-        <Title text1={"WHY "} text2={"CHOOSE US"} />
+      {/* Why Choose Us Section */}
+      <div className="text-center text-xl py-8">
+        <Title text1="WHY " text2="CHOOSE US" />
       </div>
-      <div className="flex flex-col md:flex-row gap-16">
-        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-          <b>Quality Assurance</b>
-          <p className="text-gray-600">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Asperiores, quis consequuntur commodi quas hic autem explicabo
-            laboriosam. Eius, numquam totam magni voluptates amet dolore ipsam
-            aspernatur est? Modi, quo itaque.
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="border p-6 rounded-lg shadow-md bg-white">
+          <b className="text-lg">Quality Assurance</b>
+          <p className="text-gray-600 mt-2">
+            We ensure that all our products go through rigorous quality checks,
+            providing our customers with the best-in-class items that meet high
+            standards.
           </p>
         </div>
-        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-          <b>Convenience</b>
-          <p className="text-gray-600">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Asperiores, quis consequuntur commodi quas hic autem explicabo
-            laboriosam. Eius, numquam totam magni voluptates amet dolore ipsam
-            aspernatur est? Modi, quo itaque.
+        <div className="border p-6 rounded-lg shadow-md bg-white">
+          <b className="text-lg">Convenience</b>
+          <p className="text-gray-600 mt-2">
+            Shop from the comfort of your home with an easy-to-use interface,
+            fast delivery, and multiple payment options tailored for you.
           </p>
         </div>
-        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-          <b>Exceptional Customer Service</b>
-          <p className="text-gray-600">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Asperiores, quis consequuntur commodi quas hic autem explicabo
-            laboriosam. Eius, numquam totam magni voluptates amet dolore ipsam
-            aspernatur est? Modi, quo itaque.
+        <div className="border p-6 rounded-lg shadow-md bg-white">
+          <b className="text-lg">Exceptional Customer Service</b>
+          <p className="text-gray-600 mt-2">
+            Our support team is available 24/7 to assist you with any queries or
+            concerns, ensuring a smooth shopping journey from start to finish.
           </p>
         </div>
       </div>
-      <Newsletter />
+      {/* Newsletter Section */}
+      <div className="mt-12">
+        <Newsletter />
+      </div>
     </div>
   );
 };
