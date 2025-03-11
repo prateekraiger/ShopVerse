@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import CartTotal from "../components/cartTotal";
 import Title from "../components/title";
 import { assets } from "../assets/assets";
+import { ShopContext } from "../context/ShopContext";
 
 const Placeorder = () => {
   const [method, setMethod] = useState("cod");
+
+  const { navigate } = useContext(ShopContext);
 
   return (
     <div className="flex flex-col sm:flex-row justify-between gap-8 pt-5 sm:pt-14 px-4 sm:px-8 max-w-6xl mx-auto">
@@ -134,7 +137,10 @@ const Placeorder = () => {
             </div>
           </div>
 
-          <button className="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors">
+          <button
+            onClick={() => navigate("/orders")}
+            className="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors"
+          >
             Place Order
           </button>
         </div>

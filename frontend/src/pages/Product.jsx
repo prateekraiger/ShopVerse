@@ -12,7 +12,6 @@ const Product = () => {
   const [productData, setProductData] = useState(null);
   const [selectedImage, setSelectedImage] = useState("");
   const [selectedSize, setSelectedSize] = useState(null);
-  const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState("description");
   const [loading, setLoading] = useState(true);
   const [addedToCart, setAddedToCart] = useState(false);
@@ -35,7 +34,6 @@ const Product = () => {
         setSelectedImage(foundProduct.image?.[0] || "");
         // Reset selections when product changes
         setSelectedSize(null);
-        setQuantity(1);
         setAddedToCart(false);
       }
     }
@@ -50,20 +48,13 @@ const Product = () => {
     setSelectedSize(size);
   };
 
-  const handleQuantityChange = (change) => {
-    setQuantity((prev) => {
-      const newValue = prev + change;
-      return newValue > 0 ? newValue : 1;
-    });
-  };
-
   const handleAddToCart = () => {
     if (!selectedSize) {
       toast.error("Please select an item and size");
       return;
     }
 
-    addToCart(productData._id, selectedSize, quantity);
+    addToCart(productData._id, selectedSize);
     setAddedToCart(true);
 
     setTimeout(() => {
@@ -209,28 +200,6 @@ const Product = () => {
                 Selected: {selectedSize}
               </p>
             )}
-          </div>
-
-          {/* Quantity Selector */}
-          <div>
-            <p className="text-md font-semibold mb-2">Quantity</p>
-            <div className="flex items-center border border-gray-300 rounded-md w-min">
-              <button
-                onClick={() => handleQuantityChange(-1)}
-                className="px-3 py-1 text-xl font-medium hover:bg-gray-100"
-              >
-                -
-              </button>
-              <span className="px-4 py-1 text-center min-w-[40px]">
-                {quantity}
-              </span>
-              <button
-                onClick={() => handleQuantityChange(1)}
-                className="px-3 py-1 text-xl font-medium hover:bg-gray-100"
-              >
-                +
-              </button>
-            </div>
           </div>
 
           {/* Add to Cart Button */}

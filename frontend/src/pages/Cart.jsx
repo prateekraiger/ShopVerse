@@ -61,7 +61,7 @@ const Cart = () => {
               (product) => product._id === item._id
             );
 
-            if (!productData) return null; // Prevents errors if product not found
+            if (!productData) return null;
 
             const { name, price, image } = productData;
 
