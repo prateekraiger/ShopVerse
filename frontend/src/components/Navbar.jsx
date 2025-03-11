@@ -58,9 +58,15 @@ const Navbar = () => {
           </Link>
           <div className="hidden absolute right-0 pt-4 group-hover:block">
             <div className="flex flex-col gap-2 w-38 py-3 px-5 bg-slate-100 text-gray-500 rounded shadow-lg">
-              <p className="cursor-pointer hover:text-black">My Profile</p>
-              <p className="cursor-pointer hover:text-black">Orders</p>
-              <p className="cursor-pointer hover:text-black">Logout</p>
+              <Link to="/profile">
+                <p className="cursor-pointer hover:text-black">My Profile</p>
+              </Link>
+              <Link to="/orders">
+                <p className="cursor-pointer hover:text-black">Orders</p>
+              </Link>
+              <Link to="/logout">
+                <p className="cursor-pointer hover:text-black">Logout</p>
+              </Link>
             </div>
           </div>
         </div>
