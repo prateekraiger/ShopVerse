@@ -38,7 +38,7 @@ const Footer = () => {
           <p className="text-lg font-semibold mb-4 text-white">Get in Touch</p>
           <ul className="space-y-2">
             <li className="flex items-center gap-2">
-              <FaPhone className="text-green-400" /> +91 9876543210
+              <FaPhone className="text-green-400" /> +91 9876543210 
             </li>
             <li className="flex items-center gap-2">
               <FaEnvelope className="text-green-400" /> support@shopverse.com
