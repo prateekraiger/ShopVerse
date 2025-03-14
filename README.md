@@ -86,6 +86,7 @@ We welcome contributions to improve ShopVerse! Please follow these steps:
 5. Push to the branch (`git push origin feature/amazing-feature`)
 6. Open a Pull Request
 
-## License
+##  License
+----------
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+ShopVerse Website is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt)
