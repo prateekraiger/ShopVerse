@@ -55,8 +55,8 @@ const About = () => {
           <p className="text-gray-600 mt-2">
             Shop from the comfort of your home with an easy-to-use interface,
             fast delivery, and multiple payment options tailored for you.
-          </p>
-        </div>
+          </p> 
+        </div> 
         <div className="border p-6 rounded-lg shadow-md bg-white">
           <b className="text-lg">Exceptional Customer Service</b>
           <p className="text-gray-600 mt-2">
