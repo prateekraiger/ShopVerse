@@ -1,6 +1,6 @@
-# ShopVerse
+# StyleVerse
 
-ShopVerse is a modern e-commerce platform built with React, offering customers a seamless shopping experience with a user-friendly interface and robust functionality.
+StyleVerse is a modern e-commerce platform built with React, offering customers a seamless shopping experience with a user-friendly interface and robust functionality.
 
 ## Overview
 
